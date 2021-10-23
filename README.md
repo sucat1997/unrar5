@@ -10,4 +10,6 @@
 
 #### 用java代码编写，目前完成用于解压rar4.0及以下、rar5.0及以上的版本，并且使用RandomAccessFile + buffer流的方式进行改进
 
-###最近会快速迭代
+### Welcome to correct
+
+### 欢迎指正
