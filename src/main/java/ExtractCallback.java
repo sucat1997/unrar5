@@ -29,11 +29,12 @@ public class ExtractCallback implements IArchiveExtractCallback {
         final boolean isFolder = (Boolean) inArchive.getProperty(index, PropID.IS_FOLDER);
         final String[] oldPath = {""};
         return new ISequentialOutStream() {
+            @Override
             public int write(byte[] data) throws SevenZipException {
                 try {
                     if (!isFolder) {
 //                        System.out.println(path);
-                        File file = new File(ourDir+"\\" + path);
+                        File file = new File(ourDir + File.separator + path);
                         if (path.equals(oldPath[0])){
                             save2File(file, data,true);
                         }else{

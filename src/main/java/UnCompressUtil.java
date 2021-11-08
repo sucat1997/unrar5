@@ -21,5 +21,7 @@ public class UnCompressUtil {
             in[i] = i;
         }
         inArchive.extract(in, false, new ExtractCallback(inArchive, "366", outputDir));
+        inArchive.close();
+        randomAccessFile.close();
     }
 }
